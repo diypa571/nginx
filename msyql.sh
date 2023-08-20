@@ -34,9 +34,9 @@ send \"Y\r\"
 
 expect eof
 ")
-
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 # Provide instructions for changing the password manually
 echo "Remember to change the MySQL root password using the following command:"
-echo "mysql-> ALTER USER 'root'@'localhost' IDENTIFIED BY '$PASSWORD'; flush privileges; exit;"
-
+echo "mysql-> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$PASSWORD';"
+ 
 echo "$SECURE_MYSQL"
